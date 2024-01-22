@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="438.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.rentCar.controller.ActiveRentController">
+    <children>
+        <TableView fx:id="tblRent" layoutX="12.0" layoutY="114.0" onMouseClicked="#tblRentOnMouseClicked" prefHeight="316.0" prefWidth="748.0">
+            <columns>
+                <TableColumn fx:id="colRentID" prefWidth="75.0" text="Rent ID" />
+                <TableColumn fx:id="colCustomerID" prefWidth="123.0" text="Customer ID" />
+                <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+                <TableColumn fx:id="colCarId" prefWidth="119.0" text="Car ID" />
+                <TableColumn fx:id="colTotal" prefWidth="96.0" text="Total" />
+                <TableColumn fx:id="colStartingDate" prefWidth="115.0" text="Starting Date" />
+                <TableColumn fx:id="colEndingDate" prefWidth="118.0" text="Ending Date" />
+            </columns>
+        </TableView>
+        <Label layoutX="12.0" layoutY="30.0" text="Active Rent LIST">
+            <font>
+                <Font size="52.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtCustomerID" layoutX="512.0" layoutY="70.0" onKeyReleased="#txtCustomerIdOnKeyReleased" prefHeight="25.0" prefWidth="247.0" promptText="Search by Customer ID" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="438.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/19"
+            fx:controller="lk.ijse.rentCar.controller.CarCatogeryFormController">
+    <children>
+        <Label layoutX="32.0" layoutY="85.0" text="Category Id:"/>
+        <Label layoutX="22.0" layoutY="124.0" text="Category Name:"/>
+        <TableView fx:id="tblCategory" layoutX="290.0" layoutY="41.0" prefHeight="370.0" prefWidth="471.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="152.0" text="Category Id"/>
+                <TableColumn fx:id="colName" prefWidth="331.0" text="Category Name"/>
+            </columns>
+        </TableView>
+        <TextField fx:id="txtCatId" layoutX="113.0" layoutY="81.0" onAction="#txtCatIdSearchOnAction" prefHeight="25.0"
+                   prefWidth="78.0"/>
+        <Button layoutX="196.0" layoutY="81.0" mnemonicParsing="false" onAction="#btnCarCatSearchOnAction"
+                style="-fx-background-color: #f7b731;" text="Search"/>
+        <TextField fx:id="txtCatName" layoutX="109.0" layoutY="120.0" prefHeight="25.0" prefWidth="142.0"/>
+        <Line endX="119.0" layoutX="133.0" layoutY="161.0" opacity="0.23" startX="-100.0"/>
+        <Button layoutX="14.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnCarCatSaveOnAction"
+                prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: #f7b731;" text="Save">
+            <graphic>
+                <ImageView fitHeight="15.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/icons8-save-50.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button layoutX="74.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnCarCatUpdateOnAction"
+                prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #f7b731;" text="Update">
+            <graphic>
+                <ImageView fitHeight="15.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/icons8-update-50.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button layoutX="156.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnCarCatDeleteOnAction"
+                prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #f7b731;" text="Delete">
+            <graphic>
+                <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/icons8-delete-24.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label layoutX="347.0" layoutY="9.0" text="Car Category">
+            <font>
+                <Font name="Arial" size="18.0"/>
+            </font>
+        </Label>
+        <Button layoutX="230.0" layoutY="174.0" mnemonicParsing="false" onAction="#btnCarCatClearOnAction"
+                prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: #f7b731;" text="Clear"/>
+    </children>
+</AnchorPane>
